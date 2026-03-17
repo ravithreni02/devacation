@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Github, Twitter, Linkedin, Instagram, Mail, ExternalLink } from 'lucide-react';
+import { useLogo } from '../hooks/useLogo';
 
 export const Footer = () => {
+  const { logo } = useLogo();
   return (
     <footer className="bg-[#0A0A0F] pt-24 pb-12 border-t border-[#7B2FF7]/10">
       <div className="container max-w-7xl mx-auto px-6">
@@ -11,7 +13,7 @@ export const Footer = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-[#7B2FF7] to-[#FF8C42] rounded-xl flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(123,47,247,0.3)]">
                 <img 
-                  src="https://img.freepik.com/premium-photo/neon-deer-head-with-antlers-cyberpunk-style-generative-ai_958192-343.jpg" 
+                  src={logo} 
                   alt="Logo" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

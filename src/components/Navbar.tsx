@@ -4,11 +4,13 @@ import { auth, signInWithGoogle, logout } from '../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { cn } from '../lib/utils';
 import { LogIn, LogOut, User as UserIcon, Menu, X } from 'lucide-react';
+import { useLogo } from '../hooks/useLogo';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [user, setUser] = useState<User | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { logo } = useLogo();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -44,7 +46,7 @@ export const Navbar = () => {
           >
             <div className="absolute inset-0 bg-white/10 group-hover:bg-white/20 transition-colors" />
             <img 
-              src="https://img.freepik.com/premium-photo/neon-deer-head-with-antlers-cyberpunk-style-generative-ai_958192-343.jpg" 
+              src={logo} 
               alt="Logo" 
               className="w-full h-full object-cover relative z-10"
               referrerPolicy="no-referrer"

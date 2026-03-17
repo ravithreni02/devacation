@@ -47,7 +47,7 @@ export const Hero = () => {
         className="absolute inset-0 z-0"
       >
         <img 
-          src="https://img.freepik.com/premium-photo/neon-deer-head-with-antlers-cyberpunk-style-generative-ai_958192-343.jpg" 
+          src="https://img.freepik.com/premium-photo/cyberpunk-deer-with-neon-antlers-futuristic-digital-art_958192-350.jpg" 
           alt="Cyberpunk Neon Deer" 
           className="w-full h-full object-cover scale-110"
           referrerPolicy="no-referrer"

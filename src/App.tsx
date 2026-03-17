@@ -6,7 +6,6 @@ import { About } from './components/About';
 import { Tracks } from './components/Tracks';
 import { Timeline } from './components/Timeline';
 import { Prizes } from './components/Prizes';
-import { Sponsors } from './components/Sponsors';
 import { FAQ } from './components/FAQ';
 import { Registration } from './components/Registration';
 import { Footer } from './components/Footer';
@@ -31,7 +30,6 @@ function App() {
               <Tracks />
               <Timeline />
               <Prizes />
-              <Sponsors />
               <FAQ />
               <Registration />
             </main>
